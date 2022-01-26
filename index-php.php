@@ -27,64 +27,24 @@
     <main>
         <div class="main-container">
             <div class="app-wrapper">
-               <div class="single-disc">
-                    <div>
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/71g40mlbinL._SX355_.jpg" alt="">
+                <?php foreach($database as $single_disc) { ?>
+                    <div class="single-disc">
+                        <div>
+                            <img 
+                            src="<?php echo $single_disc['poster']; ?>" 
+                            alt="<?php echo $single_disc['title']; ?>"
+                            >
+                        </div>
+                        <h2>
+                            <?php echo $single_disc['title']; ?>
+                        </h2>
+                        <div class="disc-author">
+                            <?php echo $single_disc['author']; ?>
+                            <br>
+                            <?php echo $single_disc['year']; ?>
+                        </div>
                     </div>
-                    <h2>
-                        new jersey
-                    </h2>
-                    <div class="disc-author">
-                        Bon Jovi
-                        <br>
-                        1988
-                    </div>
-               </div>
-               <div class="single-disc">
-                    <div>
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/71g40mlbinL._SX355_.jpg" alt="">
-                    </div>
-               </div>
-               <div class="single-disc">
-                    <div>
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/71g40mlbinL._SX355_.jpg" alt="">
-                    </div>
-               </div>
-               <div class="single-disc">
-                    <div>
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/71g40mlbinL._SX355_.jpg" alt="">
-                    </div>
-               </div>
-               <div class="single-disc">
-                    <div>
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/71g40mlbinL._SX355_.jpg" alt="">
-                    </div>
-               </div>
-               <div class="single-disc">
-                    <div>
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/71g40mlbinL._SX355_.jpg" alt="">
-                    </div>
-               </div>
-               <div class="single-disc">
-                    <div>
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/71g40mlbinL._SX355_.jpg" alt="">
-                    </div>
-               </div>
-               <div class="single-disc">
-                    <div>
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/71g40mlbinL._SX355_.jpg" alt="">
-                    </div>
-               </div>
-               <div class="single-disc">
-                    <div>
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/71g40mlbinL._SX355_.jpg" alt="">
-                    </div>
-               </div>
-               <div class="single-disc">
-                    <div>
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/71g40mlbinL._SX355_.jpg" alt="">
-                    </div>
-               </div>
+                <?php } ?>
             </div>
 
         </div>

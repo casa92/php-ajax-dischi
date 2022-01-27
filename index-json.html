@@ -19,8 +19,18 @@
                     <div class="logo">
                         <img src="img/Spotify_icon.png" alt="Spotify logo">
                     </div>
-                    <div>
-                        filtro
+                    <div class="search-wrapper">
+                        <select name="category" id="music-category" v-model="searchText" type="text" class="select-genre">
+                            <option value="">All</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Pop">Pop</option>
+                            <option value="Jazz">Jazz</option>
+                            <option value="Metal">Metal</option>
+                        </select>
+                        <!-- Il figlio emette l'evento custom passando l'informazione al padre -->
+                        <button @click="getDiscData()" class="">Cerca</button>
+                        
+                        <button @click="resetSearch()" class="">Reset</button>
                     </div>
                 </div>
             </div>
